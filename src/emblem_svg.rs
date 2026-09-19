@@ -1,5 +1,5 @@
 use crate::svg::*;
-use fossable::emblem::Emblem;
+use cilki::emblem::Emblem;
 use std::error::Error;
 
 pub struct EmblemRenderer<'a> {
@@ -44,12 +44,9 @@ impl<'a> EmblemRenderer<'a> {
 
             let icon_group = icon.g.first().unwrap();
 
-            // Position the icon
+            // Position the icon, keeping its own nesting and transforms intact
             svg.g.push(SvgGroup {
-                path: icon_group.path.clone(),
-                rect: icon_group.rect.clone(),
-                ellipse: icon_group.ellipse.clone(),
-                circle: icon_group.circle.clone(),
+                g: vec![icon_group.clone()],
                 transform: Some(format!(
                     "translate({},{})",
                     self.emblem.margin_px / 2,

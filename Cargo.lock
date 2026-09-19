@@ -272,6 +272,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "cilki"
+version = "0.1.2"
+dependencies = [
+ "clap",
+ "pgp",
+ "quick-xml",
+ "resvg",
+ "serde",
+ "usvg",
+]
+
+[[package]]
 name = "cipher"
 version = "0.4.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -681,18 +693,6 @@ dependencies = [
  "slotmap",
  "tinyvec",
  "ttf-parser",
-]
-
-[[package]]
-name = "fossable"
-version = "0.1.2"
-dependencies = [
- "clap",
- "pgp",
- "quick-xml",
- "resvg",
- "serde",
- "usvg",
 ]
 
 [[package]]

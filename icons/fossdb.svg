@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 64 64"
+   version="1.1"
+   xmlns="http://www.w3.org/2000/svg">
+  <g id="layer1">
+    <!-- Dependency tree structure -->
+
+    <!-- Squiggly connecting lines flowing downward -->
+    <path
+       id="fossdb-path-1" d="M 32,10 Q 28,14 26,18 T 22,26" fill="none" stroke="#000000" stroke-width="1.5" />
+    <path
+       id="fossdb-path-2" d="M 32,10 Q 34,14 36,18 T 42,26" fill="none" stroke="#000000" stroke-width="1.5" />
+    <path
+       id="fossdb-path-3" d="M 22,26 Q 18,30 16,34 T 12,42" fill="none" stroke="#000000" stroke-width="1.5" />
+    <path
+       id="fossdb-path-4" d="M 22,26 Q 24,30 26,34 T 28,42" fill="none" stroke="#000000" stroke-width="1.5" />
+    <path
+       id="fossdb-path-5" d="M 42,26 Q 44,30 46,34 T 50,42" fill="none" stroke="#000000" stroke-width="1.5" />
+    <path
+       id="fossdb-path-6" d="M 12,42 Q 14,48 16,52 T 18,58" fill="none" stroke="#000000" stroke-width="1.5" />
+    <path
+       id="fossdb-path-7" d="M 28,42 Q 30,48 32,52 T 34,58" fill="none" stroke="#000000" stroke-width="1.5" />
+    <path
+       id="fossdb-path-8" d="M 50,42 Q 48,48 46,52 T 44,58" fill="none" stroke="#000000" stroke-width="1.5" />
+    <path
+       id="fossdb-path-9" d="M 42,26 Q 38,30 36,34 T 34,42" fill="none" stroke="#000000" stroke-width="1.5" />
+    <path
+       id="fossdb-path-10" d="M 34,42 Q 36,48 38,52 T 44,58" fill="none" stroke="#000000" stroke-width="1.5" />
+
+    <!-- Root hexagon at top -->
+    <path
+       id="fossdb-path-11"
+       style="fill:#000000;stroke-width:0"
+       d="M 32,7 L 37,10 L 37,16 L 32,19 L 27,16 L 27,10 Z" />
+
+    <!-- Level 1 - two dependencies -->
+    <path
+       id="fossdb-path-12"
+       style="fill:#000000;stroke-width:0"
+       d="M 22,23 L 27,26 L 27,32 L 22,35 L 17,32 L 17,26 Z" />
+
+    <path
+       id="fossdb-path-13"
+       style="fill:#000000;stroke-width:0"
+       d="M 42,23 L 47,26 L 47,32 L 42,35 L 37,32 L 37,26 Z" />
+
+    <!-- Level 2 - three dependencies -->
+    <path
+       id="fossdb-path-14"
+       style="fill:#000000;stroke-width:0"
+       d="M 12,39 L 17,42 L 17,48 L 12,51 L 7,48 L 7,42 Z" />
+
+    <path
+       id="fossdb-path-15"
+       style="fill:#000000;stroke-width:0"
+       d="M 28,39 L 33,42 L 33,48 L 28,51 L 23,48 L 23,42 Z" />
+
+    <path
+       id="fossdb-path-16"
+       style="fill:#000000;stroke-width:0"
+       d="M 50,39 L 55,42 L 55,48 L 50,51 L 45,48 L 45,42 Z" />
+
+    <!-- Level 3 - leaf dependencies -->
+    <path
+       id="fossdb-path-17"
+       style="fill:#000000;stroke-width:0"
+       d="M 18,55 L 23,58 L 23,64 L 18,67 L 13,64 L 13,58 Z" />
+
+    <path
+       id="fossdb-path-18"
+       style="fill:#000000;stroke-width:0"
+       d="M 34,55 L 39,58 L 39,64 L 34,67 L 29,64 L 29,58 Z" />
+
+    <path
+       id="fossdb-path-19"
+       style="fill:#000000;stroke-width:0"
+       d="M 44,55 L 49,58 L 49,64 L 44,67 L 39,64 L 39,58 Z" />
+  </g>
+</svg>

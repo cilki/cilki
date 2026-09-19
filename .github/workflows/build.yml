@@ -10,11 +10,6 @@ jobs:
     name: Build / ubuntu-latest (x86_64) / ${{ matrix.target }}
     runs-on: ubuntu-latest
     steps:
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y inkscape
-
       - name: Install rust
         uses: actions-rs/toolchain@v1
         with:
@@ -29,21 +24,12 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: build
-          args: --release
+          args: --release --all-features
 
-      - name: Generate SVGs
-        run: |
-          mkdir -p artifacts
-          for name in fossable sandpolis goldboot gantry turbine outpost; do
-            target/release/fossable emblem ${name} --output artifacts --icon --bg
-            target/release/fossable emblem ${name} --output artifacts --icon
-            target/release/fossable emblem ${name} --output artifacts
-          done
-
-      - name: Generate PNGs
-        run: ./raster.sh artifacts
+      - name: Generate emblems
+        run: target/release/cilki build-graphics
 
       - uses: actions/upload-artifact@v4
         with:
-          name: fossable-assets
-          path: artifacts
+          name: cilki-assets
+          path: emblems

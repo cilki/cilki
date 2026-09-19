@@ -116,23 +116,23 @@ pub const OUTPOST: Emblem = Emblem {
     year: 2024,
 };
 
-#[cfg(feature = "project-common-ci")]
-pub const COMMON_CI: Emblem = Emblem {
-    name: "common-ci",
+#[cfg(feature = "project-cibox")]
+pub const CIBOX: Emblem = Emblem {
+    name: "cibox",
     word: [
-        "                                   ",
-        "                                   ",
-        "◼◼◼ ◼◼◼ ◼◼◼◼◼ ◼◼◼◼◼ ◼◼◼ ◼◼◼   ◼◼◼ ◼",
-        "◼   ◼ ◼ ◼ ◼ ◼ ◼ ◼ ◼ ◼ ◼ ◼ ◼   ◼   ◼",
-        "◼◼◼ ◼◼◼ ◼ ◼ ◼ ◼ ◼ ◼ ◼◼◼ ◼ ◼   ◼◼◼ ◼",
-        "                                   ",
-        "                                   ",
+        "      ◼          ",
+        "      ◼          ",
+        "◼◼◼ ◼ ◼◼◼ ◼◼◼ ◼ ◼",
+        "◼   ◼ ◼ ◼ ◼ ◼  ◼ ",
+        "◼◼◼ ◼ ◼◼◼ ◼◼◼ ◼ ◼",
+        "                 ",
+        "                 ",
     ],
     margin_px: 7,
     rect_side_px: 7,
     rect_gap_px: 1,
     color: "#37c88b",
-    icon: include_str!("../icons/common-ci.svg"),
+    icon: include_str!("../icons/cibox.svg"),
     icon_width: Some(50),
     year: 2025,
 };
@@ -196,6 +196,27 @@ pub const ATTEST: Emblem = Emblem {
     rect_gap_px: 1,
     color: "#248467",
     icon: include_str!("../icons/attest.svg"),
+    icon_width: Some(50),
+    year: 2026,
+};
+
+#[cfg(feature = "project-codemine")]
+pub const CODEMINE: Emblem = Emblem {
+    name: "codemine",
+    word: [
+        "          ◼                    ",
+        "          ◼                    ",
+        "◼◼◼ ◼◼◼ ◼◼◼  ◼◼ ◼◼◼◼◼ ◼ ◼◼◼  ◼◼",
+        "◼   ◼ ◼ ◼ ◼ ◼◼  ◼ ◼ ◼ ◼ ◼ ◼ ◼◼ ",
+        "◼◼◼ ◼◼◼ ◼◼◼  ◼◼ ◼ ◼ ◼ ◼ ◼ ◼  ◼◼",
+        "                               ",
+        "                               ",
+    ],
+    margin_px: 7,
+    rect_side_px: 7,
+    rect_gap_px: 1,
+    color: "#8b37c8",
+    icon: include_str!("../icons/codemine.svg"),
     icon_width: Some(50),
     year: 2026,
 };

@@ -1,10 +1,9 @@
 [package]
-authors = ["Tyler Cook"]
-description = "Contains official imagery and digital provenance for all fossable projects"
+authors = ["cilki"]
+description = "Contains imagery and digital provenance for all cilki projects"
 edition = "2021"
-homepage = "https://fossable.org"
-license-file = "LICENSE.md"
-name = "fossable"
+license = "Unlicense"
+name = "cilki"
 version = "0.1.2"
 
 [dependencies]
@@ -24,7 +23,8 @@ build-graphics = ["dep:quick-xml", "dep:serde", "dep:resvg", "dep:usvg"]
 
 # Each project can be enabled individually
 project-attest = []
-project-common-ci = []
+project-cibox = []
+project-codemine = []
 project-fossdb = []
 project-goldboot = []
 project-outpost = []

@@ -50,7 +50,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             key: _,
         } => todo!(),
         #[cfg(feature = "verify")]
-        Commands::Verify { artifact } => fossable::signing::verify(artifact)?,
+        Commands::Verify { artifact } => cilki::signing::verify(artifact)?,
         #[cfg(feature = "build-graphics")]
         Commands::BuildGraphics => build_graphics()?,
     };
@@ -68,23 +68,25 @@ fn build_graphics() -> Result<(), Box<dyn Error>> {
     for bg_style in [true, false] {
         for emblem in [
             #[cfg(feature = "project-goldboot")]
-            &fossable::emblem::GOLDBOOT,
+            &cilki::emblem::GOLDBOOT,
             #[cfg(feature = "project-attest")]
-            &fossable::emblem::ATTEST,
+            &cilki::emblem::ATTEST,
             #[cfg(feature = "project-solder")]
-            &fossable::emblem::SOLDER,
+            &cilki::emblem::SOLDER,
             #[cfg(feature = "project-sandpolis")]
-            &fossable::emblem::SANDPOLIS,
+            &cilki::emblem::SANDPOLIS,
             #[cfg(feature = "project-turbine")]
-            &fossable::emblem::TURBINE,
+            &cilki::emblem::TURBINE,
             #[cfg(feature = "project-outpost")]
-            &fossable::emblem::OUTPOST,
+            &cilki::emblem::OUTPOST,
             #[cfg(feature = "project-workset")]
-            &fossable::emblem::WORKSET,
-            #[cfg(feature = "project-common-ci")]
-            &fossable::emblem::COMMON_CI,
+            &cilki::emblem::WORKSET,
+            #[cfg(feature = "project-cibox")]
+            &cilki::emblem::CIBOX,
             #[cfg(feature = "project-fossdb")]
-            &fossable::emblem::FOSSDB,
+            &cilki::emblem::FOSSDB,
+            #[cfg(feature = "project-codemine")]
+            &cilki::emblem::CODEMINE,
         ] {
             let renderer =
                 EmblemRenderer::new(emblem, if bg_style { Some("fill:#333333") } else { None });

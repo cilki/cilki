@@ -77,9 +77,11 @@ impl Svg {
     }
 }
 
-#[derive(Serialize, Deserialize, Default)]
+#[derive(Serialize, Deserialize, Default, Clone)]
 #[serde(rename = "g")]
 pub struct SvgGroup {
+    #[serde(default)]
+    pub g: Vec<SvgGroup>,
     #[serde(default)]
     pub path: Vec<SvgPath>,
     #[serde(default)]
@@ -88,7 +90,7 @@ pub struct SvgGroup {
     pub ellipse: Vec<SvgEllipse>,
     #[serde(default)]
     pub circle: Vec<SvgCircle>,
-    #[serde(rename = "@transform")]
+    #[serde(rename = "@transform", skip_serializing_if = "Option::is_none")]
     pub transform: Option<String>,
 }
 
