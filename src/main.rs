@@ -53,6 +53,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         Commands::Verify { artifact } => cilki::signing::verify(artifact)?,
         #[cfg(feature = "build-graphics")]
         Commands::BuildGraphics => build_graphics()?,
+        _ => panic!("No commands available"),
     };
     Ok(())
 }

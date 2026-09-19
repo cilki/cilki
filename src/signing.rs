@@ -1,4 +1,4 @@
-use pgp::{packet::PublicKey, Deserializable, Message};
+use pgp::composed::{Deserializable, Message, SignedPublicKey};
 use std::error::Error;
 use std::path::Path;
 
@@ -9,12 +9,10 @@ pub fn verify<P>(path: P) -> Result<(), Box<dyn Error>>
 where
     P: AsRef<Path>,
 {
-    let public_key = PublicKey::from_slice(pgp::types::Version::New, include_bytes!("public.key"))?;
+    let public_key = SignedPublicKey::from_bytes(&include_bytes!("public.key")[..])?;
 
-    // TODO don't read entirely
-    let content = std::fs::read_to_string(path.as_ref())?;
-    let (msg, _) = Message::from_string(&content)?;
+    let (mut msg, _) = Message::from_armor_file(path.as_ref())?;
 
-    msg.verify(&public_key)?;
+    msg.verify_read(&public_key)?;
     Ok(())
 }

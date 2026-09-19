@@ -215,7 +215,7 @@ pub const CODEMINE: Emblem = Emblem {
     margin_px: 7,
     rect_side_px: 7,
     rect_gap_px: 1,
-    color: "#8b37c8",
+    color: "#a0a0a0",
     icon: include_str!("../icons/codemine.svg"),
     icon_width: Some(50),
     year: 2026,
