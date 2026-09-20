@@ -1,13 +1,15 @@
 <svg width="208" height="69" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g transform="translate(3,3)">
-    <path id="hash-v1" style="fill:none;stroke:#248467;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" d="M 18 16 V 48"/>
-    <path id="hash-v2" style="fill:none;stroke:#248467;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" d="M 30 16 V 48"/>
-    <path id="hash-h1" style="fill:none;stroke:#248467;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" d="M 14 26 H 34"/>
-    <path id="hash-h2" style="fill:none;stroke:#248467;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" d="M 14 38 H 34"/>
-    <path id="bang" style="fill:none;stroke:#248467;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" d="M 44 16 V 40"/>
-    <circle cx="44" cy="48" id="bang-dot" r="3.2" style="fill:#248467;stroke:none"/>
+    <g>
+      <path id="hash-v1" style="fill:none;stroke:#248467;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" d="M 18 16 V 48"/>
+      <path id="hash-v2" style="fill:none;stroke:#248467;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" d="M 30 16 V 48"/>
+      <path id="hash-h1" style="fill:none;stroke:#248467;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" d="M 14 26 H 34"/>
+      <path id="hash-h2" style="fill:none;stroke:#248467;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" d="M 14 38 H 34"/>
+      <path id="bang" style="fill:none;stroke:#248467;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" d="M 44 16 V 40"/>
+      <circle cx="44" cy="48" id="bang-dot" r="3.2" style="fill:#248467;stroke:none"/>
+    </g>
   </g>
-  <g transform="">
+  <g>
     <rect style="fill:#248467" id="4-0" width="7" height="7" x="57" y="39" rx="1"/>
     <rect style="fill:#248467" id="3-1" width="7" height="7" x="65" y="31" rx="1"/>
     <rect style="fill:#248467" id="5-1" width="7" height="7" x="65" y="47" rx="1"/>
