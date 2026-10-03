@@ -174,7 +174,7 @@ pub const SOLDER: Emblem = Emblem {
     rect_side_px: 7,
     rect_gap_px: 1,
     color: "#37c88b",
-    icon: include_str!("../icons/fossdb.svg"),
+    icon: include_str!("../icons/solder.svg"),
     icon_width: Some(50),
     year: 2026,
 };
