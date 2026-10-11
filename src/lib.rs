@@ -4,3 +4,6 @@ pub mod projects;
 pub mod signing;
 
 pub mod emblem;
+
+#[cfg(feature = "terminal")]
+pub mod terminal;

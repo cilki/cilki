@@ -4,13 +4,19 @@ description = "Contains imagery and digital provenance for all cilki projects"
 edition = "2021"
 license = "Unlicense"
 name = "cilki"
-version = "0.1.4"
+version = "0.2.0"
 
 [dependencies]
 clap = { version = "4.4.8", features = ["derive"] }
 pgp = { version = "0.21.0", optional = true }
 quick-xml = { version = "0.42.0", features = ["serialize"], optional = true }
 serde = { version = "1", features = ["derive"], optional = true }
+ratatui = { version = "0.30", optional = true }
+ratatui-image = { version = "11.0", default-features = false, features = [
+  "crossterm",
+], optional = true }
+crossterm = { version = "0.29", default-features = false, optional = true }
+image = { version = "0.25", default-features = false, optional = true }
 resvg = { version = "0.48.1", optional = true }
 usvg = { version = "0.48.1", optional = true }
 
@@ -20,6 +26,18 @@ verify = ["dep:pgp"]
 
 # Generate graphics via the build-graphics subcommand
 build-graphics = ["dep:quick-xml", "dep:serde", "dep:resvg", "dep:usvg"]
+
+# Draw emblems as block characters
+terminal = ["dep:crossterm"]
+
+# Draw emblems with terminal graphics
+terminal-graphics = [
+  "terminal",
+  "dep:resvg",
+  "dep:image",
+  "dep:ratatui",
+  "dep:ratatui-image",
+]
 
 # Each project can be enabled individually
 project-attest = []
